@@ -45,7 +45,7 @@
       "variables": [
         {
           "name": "SDL2_DIR",
-          "value": "C:/Users/Richie/Desktop/basic linking/cmake-update/OpenGL_CMake_Skeleton",
+          "value": "./",
           "type": "PATH"
         }
       ]
