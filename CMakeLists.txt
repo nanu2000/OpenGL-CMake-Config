@@ -21,6 +21,27 @@ add_definitions(-DGLEW_STATIC)
 add_subdirectory(lib/glew EXCLUDE_FROM_ALL)
 target_link_libraries(main PRIVATE libglew_static)
 
+
+
 # glm
 add_subdirectory(lib/glm EXCLUDE_FROM_ALL)
 target_link_libraries(main PRIVATE glm)
+
+
+
+
+
+# bullet
+include_directories(main lib/bullet/src)
+target_link_libraries(main PRIVATE BulletDynamics)
+target_link_libraries(main PRIVATE BulletCollision)
+target_link_libraries(main PRIVATE LinearMath)
+# BulletDynamics.lib;BulletCollision.lib;
+
+#some Bullet specific definitions need to be used, to be compatible
+if (USE_DOUBLE_PRECISION)
+add_definitions( -DBT_USE_DOUBLE_PRECISION)
+set( BULLET_DOUBLE_DEF "-DBT_USE_DOUBLE_PRECISION")
+endif (USE_DOUBLE_PRECISION)
+
+add_subdirectory(lib/bullet EXCLUDE_FROM_ALL)
