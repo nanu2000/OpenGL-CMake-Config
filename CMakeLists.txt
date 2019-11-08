@@ -27,8 +27,9 @@ target_link_libraries(main PRIVATE libglew_static)
 add_subdirectory(lib/glm EXCLUDE_FROM_ALL)
 target_link_libraries(main PRIVATE glm)
 
-
-
+# steamnetworkingsockets
+# add_subdirectory(lib/gamenetworksockets EXCLUDE_FROM_ALL)
+# target_link_libraries(main PRIVATE GameNetworkingSockets)
 
 
 # bullet

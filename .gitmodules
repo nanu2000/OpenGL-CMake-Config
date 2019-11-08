@@ -7,3 +7,6 @@
 [submodule "lib/bullet"]
 	path = lib/bullet
 	url = https://github.com/bulletphysics/bullet3
+[submodule "lib/gamenetworksockets"]
+	path = lib/gamenetworksockets
+	url = https://github.com/ValveSoftware/GameNetworkingSockets

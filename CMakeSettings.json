@@ -99,6 +99,16 @@
           "name": "USE_MSVC_RUNTIME_LIBRARY_DLL",
           "value": "True",
           "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_CMAKE_FILES",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_LIBS",
+          "value": "False",
+          "type": "BOOL"
         }
       ]
     },
@@ -195,7 +205,7 @@
         },
         {
           "name": "INSTALL_LIBS",
-          "value": "True",
+          "value": "False",
           "type": "BOOL"
         },
         {
@@ -215,7 +225,7 @@
         },
         {
           "name": "INSTALL_CMAKE_FILES",
-          "value": "True",
+          "value": "False",
           "type": "BOOL"
         }
       ]
