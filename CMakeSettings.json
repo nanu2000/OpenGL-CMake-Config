@@ -227,6 +227,36 @@
           "name": "INSTALL_CMAKE_FILES",
           "value": "False",
           "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_SHARED_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_PROTOC_BINARIES",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_WITH_ZLIB",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "Protobuf_USE_STATIC_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "GNS_DIR",
+          "value": "./",
+          "type": "PATH"
         }
       ]
     }

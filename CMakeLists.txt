@@ -22,15 +22,14 @@ add_subdirectory(lib/glew EXCLUDE_FROM_ALL)
 target_link_libraries(main PRIVATE libglew_static)
 
 
-
 # glm
 add_subdirectory(lib/glm EXCLUDE_FROM_ALL)
 target_link_libraries(main PRIVATE glm)
 
-# steamnetworkingsockets
-# add_subdirectory(lib/gamenetworksockets EXCLUDE_FROM_ALL)
-# target_link_libraries(main PRIVATE GameNetworkingSockets)
-
+# GameNetworkingSockets
+find_package(GNS REQUIRED)
+include_directories(main ${GNS_INCLUDE_DIRS})
+target_link_libraries(main PRIVATE ${GNS_LIBRARIES})
 
 # bullet
 include_directories(main lib/bullet/src)

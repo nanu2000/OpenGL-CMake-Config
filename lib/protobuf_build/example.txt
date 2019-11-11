@@ -1,0 +1,1 @@
+"C:\Users\Richie\Desktop\basic linking\cmake-update\OpenGL-CMake-Config\lib\protobuf_build\populate_all.bat" "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\Tools\VsDevCmd.bat"
