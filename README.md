@@ -40,14 +40,28 @@ Install libssl:
 ```
 apt install libssl-dev
 ```
+Now for me I needed to update libssl and apt-get wouldn't do the job. I downloaded the tar.gz file from openssl.org (v 1.1.1d), extracted it, ran ./config --openssldir=/usr/local/ssl shared zlib
+ran make
+ran make install.
+
 Install protobuf:
 ```
 apt install libprotobuf-dev protobuf-compiler
 ```
-install gamenetworkingsockets:
+Install ninja
+apt install build-ninja
+
+Install gamenetworkingsockets:
 ```
+git clone 
+cd gamenetworkingsockets
 mkdir build
 cd build
 cmake -G Ninja ..
 ninja
+```
+
+Optional but I move the output files into lib where sdl is
+```
+mv /usr/lib/x86_64-linux-gnu
 ```
