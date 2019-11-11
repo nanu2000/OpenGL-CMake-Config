@@ -5,11 +5,18 @@
 	path = lib/glm
 	url = https://github.com/g-truc/glm
 [submodule "lib/bullet"]
+	
 	path = lib/bullet
+	
 	url = https://github.com/bulletphysics/bullet3
+
 [submodule "lib/gamenetworksockets"]
+	
 	path = lib/gamenetworksockets
+	
 	url = https://github.com/ValveSoftware/GameNetworkingSockets
-[submodule "lib/protobuff"]
-	path = lib/protobuff
+
+[submodule "lib/protobuf"]
+	
+	path = lib/protobuf	
 	url = https://github.com/protocolbuffers/protobuf
