@@ -40,7 +40,7 @@ Install libssl:
 ```
 apt install libssl-dev
 ```
-Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. Follow this awesome tutorial:
+Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. This awesome tutorial will show you how to update libssl from it's source:
 https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
 
 Install protobuf:
