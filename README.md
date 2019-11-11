@@ -64,3 +64,7 @@ Optional but I move the output files into lib where sdl is
 ```
 mv /usr/lib/x86_64-linux-gnu
 ```
+
+## Debuging
+### 
+
