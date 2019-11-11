@@ -40,9 +40,8 @@ Install libssl:
 ```
 apt install libssl-dev
 ```
-Now for me I needed to update libssl and apt-get wouldn't do the job. I downloaded the tar.gz file from openssl.org (v 1.1.1d), extracted it, ran ./config --openssldir=/usr/local/ssl shared zlib
-ran make
-ran make install.
+Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. Follow this awesome tutorial:
+https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
 
 Install protobuf:
 ```
