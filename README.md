@@ -1,9 +1,21 @@
 # OpenGL-CMake-Config
-Based off of https://github.com/ArthurSonzogni/OpenGL_CMake_Skeleton
 
-# Steps
+## A CMake configuration for Visual Studio cross platform development.
+* Contains configuration for:
+* SDL2 (cross platform contexting)
+* Bullet3 (3D Physics engine)
+* GLM (Math library commonly used alongside OpenGL)
+* glew (OpenGL extension loading library)
+* GameNetworkSockets (Basic networking library for games)
 
-Just a heads up: This is not an easy build process, but I tried to make it go as smoothly as possible.
+slightly based off of https://github.com/ArthurSonzogni/OpenGL_CMake_Skeleton
+
+# Building
+
+Just a heads up: This is not an easy build process, but I added some scripts to make this process go as smooth as possible.
+Some of the CMake scripts and library linking could definitely be considered 'hacky' but I'm justifying it by saying it works, and it's mainly built for my own dev environment.
+
+If you end up using this for your own projects, hope you enjoy!
 
 ### Windows 10 install for Visual Studio Cross Platform
 * Git clone --recursive
@@ -68,5 +80,6 @@ mv libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu
 ```
 
 ## Debuging
-### 
-
+* Double check CMakeSettings like SDL2_DIR and GNS_LIB_DIR, they should both point to their library directories.
+* The populate_all scripts need to be supplied with VsDevCmd.bat. The path for VsDevCmd.bat differs on each version of visual studio.
+* Lots of trial and error. Building this first try with no errors seems unlikely.
