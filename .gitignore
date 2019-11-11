@@ -1,0 +1,17 @@
+lib/gamenetworksockets_build/Debug/x86/*
+lib/gamenetworksockets_build/Debug/x64/*
+lib/gamenetworksockets_build/Release/x86/*
+lib/gamenetworksockets_build/Release/x64/*
+!lib/gamenetworksockets_build/Debug/x86/pop.bat
+!lib/gamenetworksockets_build/Debug/x64/pop.bat
+!lib/gamenetworksockets_build/Release/x86/pop.bat
+!lib/gamenetworksockets_build/Release/x64/pop.bat
+
+lib/protobuf_build/Debug/x86/*
+lib/protobuf_build/Debug/x64/*
+lib/protobuf_build/Release/x86/*
+lib/protobuf_build/Release/x64/*
+!lib/protobuf_build/Debug/x86/pop.bat
+!lib/protobuf_build/Debug/x64/pop.bat
+!lib/protobuf_build/Release/x86/pop.bat
+!lib/protobuf_build/Release/x64/pop.bat

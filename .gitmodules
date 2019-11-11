@@ -10,3 +10,6 @@
 [submodule "lib/gamenetworksockets"]
 	path = lib/gamenetworksockets
 	url = https://github.com/ValveSoftware/GameNetworkingSockets
+[submodule "lib/protobuff"]
+	path = lib/protobuff
+	url = https://github.com/protocolbuffers/protobuf
