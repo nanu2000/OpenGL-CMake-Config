@@ -3,7 +3,7 @@
 ## A CMake configuration for Visual Studio cross platform development.
 Supports cross compiling for Linux and Windows x86 and x64.
 
-Contains libraries:
+Contains:
 * SDL2 (cross platform library for hardware, and graphics via OpenGL and Direct3D)
 * Bullet3 (3D Physics engine)
 * GLM (Math library commonly used alongside OpenGL)
