@@ -1,6 +1,6 @@
 # OpenGL-CMake-Config
 
-## A CMake configuration for Visual Studio cross platform development.
+## A CMake configuration for Cross platform development.
 Supports cross compiling for Linux and Windows x86 and x64.
 
 Contains:
