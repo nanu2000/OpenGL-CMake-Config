@@ -40,14 +40,33 @@ Install libssl:
 ```
 apt install libssl-dev
 ```
+Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. This awesome tutorial will show you how to update libssl from it's source:
+https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
+
 Install protobuf:
 ```
 apt install libprotobuf-dev protobuf-compiler
 ```
-install gamenetworkingsockets:
+Install ninja
+apt install build-ninja
+
+Install gamenetworkingsockets:
 ```
+git clone 
+cd gamenetworkingsockets
 mkdir build
 cd build
 cmake -G Ninja ..
 ninja
 ```
+
+Optional but I move the output files into lib where sdl is
+```
+cd src
+mv libGameNetworkingSockets_s.a /usr/lib/x86_64-linux-gnu
+mv libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu
+```
+
+## Debuging
+### 
+
