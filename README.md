@@ -3,8 +3,7 @@ Based off of https://github.com/ArthurSonzogni/OpenGL_CMake_Skeleton
 
 # Steps
 
-Just a heads up:
-## This is not an easy build process, but I tried to make it go as smoothly as possible.
+Just a heads up: This is not an easy build process, but I tried to make it go as smoothly as possible.
 
 ### Windows 10 install for Visual Studio Cross Platform
 * Git clone --recursive
@@ -23,12 +22,23 @@ This shouldn't take as long as it took protobuf to build.
 * Configure ssh login for linux machine (not going to go into this, plenty of tutorials)
 * Add machine ssh credentials to cmakesettings
 
-#### Configuring linux machine for development
-* apt-get sdl2
-* apt install libssl-dev - libssl for protobuf 
-* apt install libprotobuf-dev protobuf-compiler - protobuf
-* install gamenetworkingsockets
-$ mkdir build
-$ cd build
-$ cmake -G Ninja ..
-$ ninja
+#### Configure linux machine for development
+Install SDL2:
+``` 
+apt-get sdl2 
+```
+Install libssl:
+```
+apt install libssl-dev
+```
+Install protobuf:
+```
+apt install libprotobuf-dev protobuf-compiler
+```
+install gamenetworkingsockets:
+```
+mkdir build
+cd build
+cmake -G Ninja ..
+ninja
+```
