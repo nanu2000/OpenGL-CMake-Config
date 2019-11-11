@@ -15,3 +15,5 @@ lib/protobuf_build/Release/x64/*
 !lib/protobuf_build/Debug/x64/pop.bat
 !lib/protobuf_build/Release/x86/pop.bat
 !lib/protobuf_build/Release/x64/pop.bat
+
+out/*

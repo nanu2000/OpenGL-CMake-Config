@@ -21,6 +21,16 @@
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
       "variables": [
         {
+          "name": "GNS_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "GNS_LIB_DIR",
+          "value": "/usr/lib/x86_64-linux-gnu",
+          "type": "PATH"
+        },
+        {
           "name": "GLM_STATIC_LIBRARY_ENABLE",
           "value": "False",
           "type": "BOOL"
@@ -257,6 +267,577 @@
           "name": "GNS_DIR",
           "value": "./",
           "type": "PATH"
+        }
+      ]
+    },
+    {
+      "name": "x86-Release",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x86" ],
+      "variables": [
+        {
+          "name": "SDL2_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "BUILD_BULLET2_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_OPENGL3_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_EXTRAS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_ENET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CPU_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CLSOCKET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_UNIT_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GLUT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GRAPHICAL_BENCHMARK",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_COMDAT_FOLDING",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_DISABLE_RTTI",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "ONLY_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_FAST_FLOATINGPOINT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_FUNCTION_LEVEL_LINKING",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_BULLET3",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_RUNTIME_LIBRARY_DLL",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_DOUBLE_PRECISION",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_CMAKE_FILES",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_SHARED_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_PROTOC_BINARIES",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_WITH_ZLIB",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "Protobuf_USE_STATIC_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "GNS_DIR",
+          "value": "./",
+          "type": "PATH"
+        }
+      ]
+    },
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "SDL2_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "BUILD_BULLET2_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_OPENGL3_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_EXTRAS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_ENET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CPU_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CLSOCKET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_UNIT_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GLUT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GRAPHICAL_BENCHMARK",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_COMDAT_FOLDING",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_DISABLE_RTTI",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "ONLY_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_FAST_FLOATINGPOINT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_FUNCTION_LEVEL_LINKING",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_BULLET3",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_RUNTIME_LIBRARY_DLL",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_DOUBLE_PRECISION",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_CMAKE_FILES",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_SHARED_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_PROTOC_BINARIES",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_WITH_ZLIB",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "Protobuf_USE_STATIC_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "GNS_DIR",
+          "value": "./",
+          "type": "PATH"
+        }
+      ]
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "SDL2_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "BUILD_BULLET2_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_OPENGL3_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_EXTRAS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_ENET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CPU_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CLSOCKET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_UNIT_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_SHARED_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GLUT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GRAPHICAL_BENCHMARK",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_COMDAT_FOLDING",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_DISABLE_RTTI",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "ONLY_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_FAST_FLOATINGPOINT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_FUNCTION_LEVEL_LINKING",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_BULLET3",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_RUNTIME_LIBRARY_DLL",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_DOUBLE_PRECISION",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_CMAKE_FILES",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_SHARED_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_BUILD_PROTOC_BINARIES",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "protobuf_WITH_ZLIB",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "Protobuf_USE_STATIC_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "GNS_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "GNS_LIB_DIR",
+          "value": "/usr/lib/x86_64-linux-gnu",
+          "type": "PATH"
+        }        
+      ]
+    },
+    {
+      "name": "Linux-Release",
+      "generator": "Unix Makefiles",
+      "configurationType": "RelWithDebInfo",
+      "cmakeExecutable": "/usr/bin/cmake",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x64" ],
+      "remoteMachineName": "${defaultRemoteMachineName}",
+      "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
+      "remoteBuildRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/build/${name}",
+      "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0",
+      "variables": [
+        {
+          "name": "GNS_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "GNS_LIB_DIR",
+          "value": "$home/Desktop/GameNetworkingSockets/build/src",
+          "type": "PATH"
+        },
+        {
+          "name": "GLM_STATIC_LIBRARY_ENABLE",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "SDL2_DIR",
+          "value": "/usr/lib/x86_64-linux-gnu/cmake/SDL2",
+          "type": "PATH"
+        },
+        {
+          "name": "ONLY_LIBS",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_BULLET2_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_BULLET3",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CLSOCKET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_CPU_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_EGL",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_ENET",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_EXTRAS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_OPENGL3_DEMOS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_UNIT_TESTS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_EXTRA_LIBS",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GLUT",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_GRAPHICAL_BENCHMARK",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "USE_MSVC_RUNTIME_LIBRARY_DLL",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_CMAKE_FILES",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "INSTALL_LIBS",
+          "value": "False",
+          "type": "BOOL"
         }
       ]
     }

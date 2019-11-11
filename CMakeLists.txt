@@ -2,6 +2,10 @@
 cmake_minimum_required (VERSION 3.1)
 project (lightshow-bp)
 
+if(UNIX AND NOT APPLE)
+    add_compile_definitions(LINUX)
+endif()
+
 # The main executable
 add_executable(main
   src/main.cpp
@@ -20,7 +24,6 @@ target_link_libraries(main PRIVATE ${SDL2_LIBRARIES})
 add_definitions(-DGLEW_STATIC)
 add_subdirectory(lib/glew EXCLUDE_FROM_ALL)
 target_link_libraries(main PRIVATE libglew_static)
-
 
 # glm
 add_subdirectory(lib/glm EXCLUDE_FROM_ALL)
@@ -45,3 +48,4 @@ set( BULLET_DOUBLE_DEF "-DBT_USE_DOUBLE_PRECISION")
 endif (USE_DOUBLE_PRECISION)
 
 add_subdirectory(lib/bullet EXCLUDE_FROM_ALL)
+

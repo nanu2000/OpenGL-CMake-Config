@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2014 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2017 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -19,8 +19,9 @@
   3. This notice may not be removed or altered from any source distribution.
 */
 
-#ifndef _SDL_config_iphoneos_h
-#define _SDL_config_iphoneos_h
+#ifndef SDL_config_iphoneos_h_
+#define SDL_config_iphoneos_h_
+#define SDL_config_h_
 
 #include "SDL_platform.h"
 
@@ -115,12 +116,11 @@
 /* Enable the stub haptic driver (src/haptic/dummy/\*.c) */
 #define SDL_HAPTIC_DUMMY 1
 
-/* Enable Unix style SO loading */
-/* Technically this works, but it violates the iPhone developer agreement */
-/* #define SDL_LOADSO_DLOPEN 1 */
+/* Enable MFi joystick support */
+#define SDL_JOYSTICK_MFI 1
 
-/* Enable the stub shared object loader (src/loadso/dummy/\*.c) */
-#define SDL_LOADSO_DISABLED 1
+/* Enable Unix style SO loading */
+#define SDL_LOADSO_DLOPEN 1
 
 /* Enable various threading systems */
 #define SDL_THREAD_PTHREAD  1
@@ -139,14 +139,21 @@
 #define SDL_VIDEO_RENDER_OGL_ES 1
 #define SDL_VIDEO_RENDER_OGL_ES2    1
 
+/* Enable Vulkan support */
+#if !TARGET_OS_SIMULATOR && !TARGET_CPU_ARM // Only 64-bit devices have Metal
+#define SDL_VIDEO_VULKAN 1
+#else
+#define SDL_VIDEO_VULKAN 0
+#endif
+
 /* Enable system power support */
 #define SDL_POWER_UIKIT 1
 
 /* enable iPhone keyboard support */
 #define SDL_IPHONE_KEYBOARD 1
 
-/* enable joystick subsystem */
-#define SDL_JOYSTICK_DISABLED 0
+/* enable iOS extended launch screen */
+#define SDL_IPHONE_LAUNCHSCREEN 1
 
 /* Set max recognized G-force from accelerometer
    See src/joystick/uikit/SDL_sysjoystick.m for notes on why this is needed
@@ -156,4 +163,4 @@
 /* enable filesystem support */
 #define SDL_FILESYSTEM_COCOA   1
 
-#endif /* _SDL_config_iphoneos_h */
+#endif /* SDL_config_iphoneos_h_ */
