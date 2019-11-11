@@ -1,7 +1,7 @@
 # OpenGL-CMake-Config
 
 ## A CMake configuration for Cross platform development.
-Supports cross compiling for Linux and Windows x86 and x64.
+Supports cross compiling for Linux and Windows- both x86 and x64.
 
 Contains:
 * SDL2 (cross platform library for hardware, and graphics via OpenGL and Direct3D)
