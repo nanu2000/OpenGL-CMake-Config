@@ -2,7 +2,7 @@
 
 ## A CMake configuration for Visual Studio cross platform development.
 * Contains configuration for:
-* SDL2 (cross platform contexting)
+* SDL2 (cross platform library for hardware, and graphics via OpenGL and Direct3D)
 * Bullet3 (3D Physics engine)
 * GLM (Math library commonly used alongside OpenGL)
 * glew (OpenGL extension loading library)
