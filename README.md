@@ -62,7 +62,9 @@ ninja
 
 Optional but I move the output files into lib where sdl is
 ```
-mv /usr/lib/x86_64-linux-gnu
+cd src
+mv libGameNetworkingSockets_s.a /usr/lib/x86_64-linux-gnu
+mv libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu
 ```
 
 ## Debuging
