@@ -1,9 +1,23 @@
 # OpenGL-CMake-Config
-Based off of https://github.com/ArthurSonzogni/OpenGL_CMake_Skeleton
 
-# Steps
+## A CMake configuration for Cross platform development.
+Supports cross compiling for Linux and Windows- both x86 and x64.
 
-Just a heads up: This is not an easy build process, but I tried to make it go as smoothly as possible.
+Contains:
+* SDL2 (cross platform library for hardware, and graphics via OpenGL and Direct3D)
+* Bullet3 (3D Physics engine)
+* GLM (Math library commonly used alongside OpenGL)
+* glew (OpenGL extension loading library)
+* GameNetworkSockets (Basic networking library for games)
+
+Slightly based off of https://github.com/ArthurSonzogni/OpenGL_CMake_Skeleton
+
+# Building
+
+Just a heads up: This is not an easy build process, but I added some scripts to make this process go as smooth as possible.
+Some of the CMake scripts and library linking could definitely be considered 'hacky' but I'm justifying it by saying it works, and it's mainly built for my own dev environment.
+
+If you end up using this for your own project(s), hope you enjoy!
 
 ### Windows 10 install for Visual Studio Cross Platform
 * Git clone --recursive
@@ -30,11 +44,25 @@ GameNetworkSockets should then be installed in /lib/gamenetworksockets_build Thi
 * Create a vm for linux. I used Ubuntu 16.04. This could also be a real machine you can ssh into.
 * Configure ssh login for linux machine (not going to go into this, plenty of tutorials)
 * Add machine ssh credentials to cmakesettings
-
+* in launch.vs.json, your pipeArgs should look something like this:
+```
+"pipeArgs": [
+          "/s",
+          "${debugInfo.remoteMachineId}",
+          "/p",
+          "${debugInfo.parentProcessId}",
+          "/c",
+          "export DISPLAY=:0;${debuggerCommand}",
+          "--tty=${debugInfo.tty}"
+],
+```
+The export DISPLAY=:0; is a MUST or else you will get a segfault..
 #### Configure linux machine for development
 Install SDL2:
 ``` 
-apt-get sdl2 
+apt-get libsdl2-dev  
+apt-get libsdl2-mixer-dev
+apt-get libsdl2-image-dev
 ```
 Install libssl:
 ```
@@ -68,5 +96,6 @@ mv libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu
 ```
 
 ## Debuging
-### 
-
+* Double check CMakeSettings like SDL2_DIR and GNS_LIB_DIR, they should both point to their library directories.
+* The populate_all scripts need to be supplied with VsDevCmd.bat. The path for VsDevCmd.bat differs on each version of visual studio.
+* Lots of trial and error. Building this first try with no errors seems unlikely.
