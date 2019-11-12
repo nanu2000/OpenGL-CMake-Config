@@ -19,6 +19,18 @@ find_package(SDL2 REQUIRED)
 include_directories(main ${SDL2_INCLUDE_DIRS})
 string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
 target_link_libraries(main PRIVATE ${SDL2_LIBRARIES})
+message("${SDL2_INCLUDE_DIRS}")
+# SDL_Mixer
+find_package(SDL2_mixer REQUIRED)
+include_directories(main ${SDL_MIXER_INCLUDE_DIR})
+# string(STRIP "${SDL_MIXER_LIBRARY}" SDL_MIXER_LIBRARY)
+target_link_libraries(main PRIVATE ${SDL_MIXER_LIBRARY})
+
+# SDL_Image
+find_package(SDL2_image REQUIRED)
+include_directories(main ${SDL2IMAGE_INCLUDE_DIRS})
+# string(STRIP "${SDL_MIXER_LIBRARY}" SDL_MIXER_LIBRARY)
+target_link_libraries(main PRIVATE ${SDL2IMAGE_LIBRARIES})
 
 # glew
 add_definitions(-DGLEW_STATIC)
@@ -49,3 +61,6 @@ endif (USE_DOUBLE_PRECISION)
 
 add_subdirectory(lib/bullet EXCLUDE_FROM_ALL)
 
+
+#copy assets to build dir
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
