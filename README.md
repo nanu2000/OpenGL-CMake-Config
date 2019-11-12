@@ -44,11 +44,25 @@ GameNetworkSockets should then be installed in /lib/gamenetworksockets_build Thi
 * Create a vm for linux. I used Ubuntu 16.04. This could also be a real machine you can ssh into.
 * Configure ssh login for linux machine (not going to go into this, plenty of tutorials)
 * Add machine ssh credentials to cmakesettings
-
+* in launch.vs.json, your pipeArgs should look something like this:
+```
+"pipeArgs": [
+          "/s",
+          "${debugInfo.remoteMachineId}",
+          "/p",
+          "${debugInfo.parentProcessId}",
+          "/c",
+          "export DISPLAY=:0;${debuggerCommand}",
+          "--tty=${debugInfo.tty}"
+],
+```
+The export DISPLAY=:0; is a MUST or else you will get a segfault..
 #### Configure linux machine for development
 Install SDL2:
 ``` 
-apt-get sdl2 
+apt-get libsdl2-dev  
+apt-get libsdl2-mixer-dev
+apt-get libsdl2-image-dev
 ```
 Install libssl:
 ```
