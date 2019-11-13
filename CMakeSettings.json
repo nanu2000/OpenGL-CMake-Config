@@ -317,6 +317,16 @@
           "type": "PATH"
         },
         {
+          "name": "SDL2_mixer_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL2_image_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
           "name": "BUILD_BULLET2_DEMOS",
           "value": "False",
           "type": "BOOL"
@@ -445,6 +455,11 @@
           "name": "GNS_DIR",
           "value": "./",
           "type": "PATH"
+        },
+        {
+          "name": "SDL2_mixer_DIR",
+          "value": "./",
+          "type": "PATH"
         }
       ]
     },
@@ -461,6 +476,16 @@
       "variables": [
         {
           "name": "SDL2_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL2_mixer_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL2_image_DIR",
           "value": "./",
           "type": "PATH"
         },
@@ -609,6 +634,16 @@
       "variables": [
         {
           "name": "SDL2_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL2_mixer_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL2_image_DIR",
           "value": "./",
           "type": "PATH"
         },
