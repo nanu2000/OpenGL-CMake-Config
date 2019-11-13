@@ -903,6 +903,26 @@
           "name": "INSTALL_LIBS",
           "value": "False",
           "type": "BOOL"
+        },
+        {
+          "name": "SDL2_mixer_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL2_image_DIR",
+          "value": "./",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL_MIXER_LIB_DIR",
+          "value": "/usr/lib/x86_64-linux-gnu",
+          "type": "PATH"
+        },
+        {
+          "name": "SDL_IMAGE_LIB_DIR",
+          "value": "/usr/lib/x86_64-linux-gnu",
+          "type": "PATH"
         }
       ]
     }
