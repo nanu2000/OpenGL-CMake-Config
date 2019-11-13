@@ -60,9 +60,9 @@ The export DISPLAY=:0; is a MUST or else you will get a segfault..
 #### Configure linux machine for development
 Install SDL2:
 ``` 
-apt-get libsdl2-dev  
-apt-get libsdl2-mixer-dev
-apt-get libsdl2-image-dev
+apt-get install libsdl2-dev  
+apt-get install libsdl2-mixer-dev
+apt-get install libsdl2-image-dev
 ```
 Install libssl:
 ```
