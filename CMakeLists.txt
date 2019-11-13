@@ -6,6 +6,21 @@ if(UNIX AND NOT APPLE)
     add_compile_definitions(LINUX)
 endif()
 
+#64 bits
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+   set(ARCHITECTURE "64")
+#32 bits
+elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+   set(ARCHITECTURE "86")
+endif()
+
+
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+    set("BUILD_TYPE" "Debug")
+elseif(CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
+    set("BUILD_TYPE" "Release")
+endif()
+
 # The main executable
 add_executable(main
   src/main.cpp
@@ -64,3 +79,73 @@ add_subdirectory(lib/bullet EXCLUDE_FROM_ALL)
 
 #copy assets to build dir
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
+
+if(WIN32)
+    add_custom_command(
+        TARGET main POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different 
+            "${SDL2_LIBRARIES_PATH}/SDL2.dll"
+            $<TARGET_FILE_DIR:main>
+    )
+        
+    add_custom_command(
+        TARGET main POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory 
+            "${SDL2IMAGE_LIBRARIES_PATH}"
+            $<TARGET_FILE_DIR:main>
+    )
+
+    add_custom_command(
+        TARGET main POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory 
+            "${SDL_MIXER_LIBRARY_PATH}"
+            $<TARGET_FILE_DIR:main>
+    )
+
+    add_custom_command(
+        TARGET main POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different 
+            "${GNS_LIBRARIES_PATH}/GameNetworkingSockets.dll"
+            $<TARGET_FILE_DIR:main>
+    )
+
+    if(BUILD_TYPE MATCHES "Release")
+
+        add_custom_command(
+            TARGET main POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different 
+                "C:/sdk/protobuf/Release/protobuf-amd${ARCHITECTURE}/bin/libprotobuf.dll"
+                $<TARGET_FILE_DIR:main>
+        )
+
+    elseif(BUILD_TYPE MATCHES "Debug")
+
+        add_custom_command(
+            TARGET main POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different 
+                "C:/sdk/protobuf/Debug/protobuf-amd${ARCHITECTURE}/bin/libprotobufd.dll"
+                $<TARGET_FILE_DIR:main>
+        )
+    
+    endif()
+
+    if(ARCHITECTURE EQUAL 86)
+
+        add_custom_command(
+            TARGET main POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different 
+                "C:/Program Files (x86)/OpenSSL-Win32/bin/libcrypto-1_1.dll"
+                $<TARGET_FILE_DIR:main>
+        )
+
+    elseif(ARCHITECTURE EQUAL 64)
+
+        add_custom_command(
+            TARGET main POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different 
+                "C:/Program Files/OpenSSL-Win64/bin/libcrypto-1_1-x64.dll"
+                $<TARGET_FILE_DIR:main>
+        )
+
+    endif()
+endif()
