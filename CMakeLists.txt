@@ -6,13 +6,29 @@ if(UNIX AND NOT APPLE)
     add_compile_definitions(LINUX)
 endif()
 
+#64 bits
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+   set(ARCHITECTURE "64")
+#32 bits
+elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+   set(ARCHITECTURE "86")
+endif()
+
+
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+    set("BUILD_TYPE" "Debug")
+elseif(CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
+    set("BUILD_TYPE" "Release")
+elseif(CMAKE_BUILD_TYPE MATCHES Release)
+    set("BUILD_TYPE" "Release")
+endif()
+
 # The main executable
 add_executable(main
   src/main.cpp
 )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 11)
-target_compile_options(main PRIVATE -Wall)
 
 # SDL2
 find_package(SDL2 REQUIRED)
