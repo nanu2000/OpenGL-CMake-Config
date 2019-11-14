@@ -74,13 +74,14 @@ Install protobuf:
 ```
 apt install libprotobuf-dev protobuf-compiler
 ```
-Install ninja
-apt install build-ninja
-
+Install ninja:
+```
+apt install ninja-build
+```
 Install gamenetworkingsockets:
 ```
 git clone 
-cd gamenetworkingsockets
+cd GameNetworkingSockets
 mkdir build
 cd build
 cmake -G Ninja ..
