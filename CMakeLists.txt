@@ -19,6 +19,8 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
     set("BUILD_TYPE" "Debug")
 elseif(CMAKE_BUILD_TYPE MATCHES RelWithDebInfo)
     set("BUILD_TYPE" "Release")
+elseif(CMAKE_BUILD_TYPE MATCHES Release)
+    set("BUILD_TYPE" "Release")
 endif()
 
 # The main executable
@@ -27,7 +29,6 @@ add_executable(main
 )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 11)
-target_compile_options(main PRIVATE -Wall)
 
 # SDL2
 find_package(SDL2 REQUIRED)
