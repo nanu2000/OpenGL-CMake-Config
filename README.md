@@ -68,8 +68,7 @@ Install libssl:
 ```
 apt install libssl-dev
 ```
-Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. This awesome tutorial will show you how to update libssl from it's source:
-https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
+Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. This awesome q/a will show you how to update libssl from it's source: https://askubuntu.com/questions/1102803/how-to-upgrade-openssl-1-1-0-to-1-1-1-in-ubuntu-18-04
 
 Install protobuf:
 ```
