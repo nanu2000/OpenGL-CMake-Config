@@ -60,19 +60,23 @@ The export DISPLAY=:0; is a MUST or else you will get a segfault..
 #### Configure linux machine for development
 Install SDL2:
 ``` 
-apt-get install libsdl2-dev  
-apt-get install libsdl2-mixer-dev
-apt-get install libsdl2-image-dev
+apt install libsdl2-dev  
+apt install libsdl2-mixer-dev
+apt install libsdl2-image-dev
 ```
 Install libssl:
 ```
 apt install libssl-dev
 ```
-Now if you're unlucky like me, you might need to update libssl and apt-get wont do the job. This awesome q/a will show you how to update libssl from it's source: https://askubuntu.com/questions/1102803/how-to-upgrade-openssl-1-1-0-to-1-1-1-in-ubuntu-18-04
+Now if you're unlucky like me, you probably need to update libssl and apt-get wont do the job. This awesome q/a will show you how to update libssl from it's source: https://askubuntu.com/questions/1102803/how-to-upgrade-openssl-1-1-0-to-1-1-1-in-ubuntu-18-04
 
 Install protobuf:
 ```
 apt install libprotobuf-dev protobuf-compiler
+```
+Install cmake:
+```
+apt install cmake
 ```
 Install ninja:
 ```
